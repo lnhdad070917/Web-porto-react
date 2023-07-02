@@ -1,0 +1,141 @@
+.myCard {
+  background-color: transparent;
+  display: inline-flex;
+  perspective: 1000px;
+  width: 67%;
+  height: 250px;
+}
+.card-image {
+  height: 70%;
+  width: 80%;
+  /* background-color: aliceblue; */
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.frontSide .title {
+  font-size: 1.2em; /* Ubah ukuran font judul */
+}
+
+.frontSide p {
+  margin: 0; /* Hapus margin bawaan pada elemen p */
+}
+
+@media (max-width: 767px) {
+  .innerCard {
+    top: 1%;
+    left: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Ukuran tampilan md */
+  .myCard {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Ukuran tampilan lg */
+  .myCard {
+    width: 46%;
+    margin: 10px;
+  }
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  /* transform-style: preserve-3d; */
+  cursor: pointer;
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* border: 1px solid rgba(255, 255, 255, 0.8); */
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 0.3em rgb(168 85 247);
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.frontSide,
+.frontSide::before {
+  background: rgba(19, 20, 45, 1);
+}
+
+.backSide,
+.backSide::before {
+  background: rgb(168 85 247);
+}
+
+.backSide {
+  /* transform: rotateY(180deg); */
+  /* display: none;
+  transform: translateY(100%);
+  transition: transform 10.5s ease-in; */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, opacity 0s ease;
+}
+
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+.myCard.hovered .backSide {
+  /* display: block;
+  transform: translateY(0%); */
+  max-height: 100%;
+  opacity: 1;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.1;
+  }
+
+  80% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}

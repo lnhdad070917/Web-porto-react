@@ -68,3 +68,31 @@
     opacity: 1;
   }
 }
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-element {
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce-reverse {
+  0%,
+  100% {
+    transform: translateY(-10);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+
+.bounce-element-reverse {
+  animation: bounce 7s infinite;
+}

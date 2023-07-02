@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SpinnLoader from "./component/spinnLoader";
 import CardComponent from "./component/cardComponent";
-
+import CardProject from "./component/cardProjectComponent";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -17,6 +17,7 @@ function App() {
   }, []);
   return (
     <div>
+      {/* TOP */}
       <div
         className="relative h-full pt-20 pb-11"
         style={{ background: "rgba(19, 30, 54, 255)" }}
@@ -131,19 +132,67 @@ function App() {
           </div>
         </div>
       </div>
+      {/* Expertise */}
       <div
         className="flex justify-center items-center"
         style={{ background: "rgba(19, 30, 54, 255)" }}
       >
         <div className="py-10">
-          <h2 className="text-4xl text-white text-center">
+          <h2 className="text-4xl text-white text-center" data-aos="fade-up">
             My <span style={{ color: "rgb(168 85 247)" }}>Expertise</span>
           </h2>
-          <p className="text-center text-purple-800 text-xl pb-3">
+          <p
+            className="text-center text-slate-500 text-xl pb-3"
+            data-aos="fade-up"
+          >
             from learn and experience
           </p>
           <SpinnLoader />
           <CardComponent />
+        </div>
+      </div>
+      {/* Project */}
+      <div
+        className="h-full pt-14 pb-14 md:flex md:justify-around "
+        style={{ background: "rgba(19, 30, 54, 255)" }}
+      >
+        <div className="flex justify-center items-center md:w-2/5 w-full">
+          <div>
+            <h2
+              className="text-white text-4xl text-center"
+              data-aos="fade-up-right"
+            >
+              My <span style={{ color: "rgb(168 85 247)" }}>Project</span>
+            </h2>
+            <p
+              className="text-center text-slate-500 text-xl pb-2"
+              data-aos="fade-up-right"
+            >
+              Projects, University, and Company
+            </p>
+            <SpinnLoader />
+          </div>
+        </div>
+        <div className="w-full md:w-3/5 flex justify-center items-center">
+          <div className="w-full lg:w-3/4 ">
+            <CardProject />
+            <div className="flex justify-center pt-5">
+              <button className="hover:bg-transparent bg-purple-500 hover:text-purple-700 font-semibold text-violet-950 py-2 px-4 mx-2 border hover:border-purple-700 border-transparent rounded inline-flex items-center">
+                <Icon
+                  icon="fluent-mdl2:all-apps-mirrored"
+                  width="30"
+                  className="pr-2"
+                />
+                See all
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Contact */}
+      <div className="flex justify-center">
+        <div>
+          <h2></h2>
         </div>
       </div>
     </div>
