@@ -9,6 +9,8 @@ import "aos/dist/aos.css";
 import SpinnLoader from "./component/spinnLoader";
 import CardComponent from "./component/cardComponent";
 import CardProject from "./component/cardProjectComponent";
+import MediaSosial from "./component/mediaSosialComponent";
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -189,12 +191,8 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Contact */}
-      <div className="flex justify-center">
-        <div>
-          <h2></h2>
-        </div>
-      </div>
+      {/* Media Sosial */}
+      <MediaSosial />
     </div>
   );
 }

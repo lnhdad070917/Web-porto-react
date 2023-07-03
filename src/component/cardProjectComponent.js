@@ -44,7 +44,7 @@ const cardData = [
   },
 ];
 
-const MyCard = () => {
+const CardProjec = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleCardHover = (index) => {
@@ -95,4 +95,4 @@ const MyCard = () => {
   );
 };
 
-export default MyCard;
+export default CardProjec;
