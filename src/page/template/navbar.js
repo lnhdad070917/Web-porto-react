@@ -14,132 +14,159 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import "typeface-lobster";
+import { useLocation, Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Project", "Skill", "Contact"];
+const navItems = [
+  {
+    nama: "Home",
+    link: "/",
+  },
+  {
+    nama: "About",
+    link: "/AboutMe",
+  },
+  {
+    nama: "Project",
+    link: "/MyProject",
+  },
+  {
+    nama: "Skill",
+    link: "/MySkill",
+  },
+  {
+    nama: "Contact",
+    link: "/ContactMe",
+  },
+];
 
-class NavbarComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mobileOpen: false,
-    };
-  }
+const NavbarComponent = () => {
+  const location = useLocation();
 
-  handleDrawerToggle = () => {
-    this.setState((prevState) => ({
-      mobileOpen: !prevState.mobileOpen,
-    }));
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [activeButton, setActiveButton] = React.useState("Home");
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+    setActiveButton(null);
   };
 
-  render() {
-    const { window } = this.props;
+  const drawer = (
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+      }}
+    >
+      <Typography
+        variant="h6"
+        sx={{ my: 2, fontFamily: "Lobster, cursive", color: "#0eeae2" }}
+      >
+        Didik Adi Darmawan
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item.nama} disablePadding>
+            <ListItemButton sx={{ textAlign: "center", color: "white" }}>
+              <ListItemText primary={item.nama} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
-    const drawer = (
-      <Box
-        onClick={this.handleDrawerToggle}
+  return (
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar
+        component="nav"
         sx={{
-          textAlign: "center",
+          background:
+            "linear-gradient(120deg,rgba(19, 30, 54, 255) 25%,rgba(67, 38, 100, 255) 100%)",
         }}
       >
-        <Typography
-          variant="h6"
-          sx={{ my: 2, fontFamily: "Lobster, cursive", color: "#0eeae2" }}
-        >
-          Didik Adi Darmawan
-        </Typography>
-        <Divider />
-        <List>
-          {navItems.map((item) => (
-            <ListItem key={item} disablePadding>
-              <ListItemButton sx={{ textAlign: "center", color: "white" }}>
-                <ListItemText primary={item} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-    );
-
-    const container =
-      window !== undefined ? () => window().document.body : undefined;
-
-    return (
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar
-          component="nav"
-          sx={{
-            background:
-              "linear-gradient(120deg,rgba(19, 30, 54, 255) 25%,rgba(67, 38, 100, 255) 100%)",
-          }}
-        >
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={this.handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h5"
-              component="div"
-              sx={{
-                flexGrow: 1,
-                fontFamily: "Lobster, cursive",
-                color: "#0eeae2",
-              }}
-            >
-              Didik Adi Darmawan
-            </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button
-                  key={item}
-                  sx={{
-                    color: "white",
-                    fontWeight: "bold",
-                    "&:hover": {
-                      textDecoration: "underline",
-                      color: "purple",
-                    },
-                  }}
-                >
-                  {/* tambah component untuk link */}
-                  {item}
-                </Button>
-              ))}
-            </Box>
-          </Toolbar>
-        </AppBar>
-        <Box component="nav">
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={this.state.mobileOpen}
-            onClose={this.handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h5"
+            component="div"
             sx={{
-              display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-                background:
-                  "linear-gradient(120deg,rgba(19, 30, 54, 255) 25%,rgba(67, 38, 100, 255) 100%)",
-              },
+              flexGrow: 1,
+              fontFamily: "Lobster, cursive",
+              color: "#0eeae2",
             }}
           >
-            {drawer}
-          </Drawer>
-        </Box>
+            Didik Adi Darmawan
+          </Typography>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            {navItems.map((item) => (
+              <Button
+                key={item.nama}
+                sx={{
+                  color: "white",
+                  fontWeight: "bold",
+                  marginX: "2px",
+                  "&:hover": {
+                    color: "purple",
+                    borderBottom: "3px solid purple",
+                    paddingBottom: "2px",
+                  },
+                  ...(location.pathname === item.link && {
+                    borderBottom: "3px solid purple",
+                    paddingBottom: "2px",
+                    color: "purple",
+                    fontWeight: "bold",
+                  }),
+                }}
+                component={Link}
+                to={item.link}
+                onClick={() => {
+                  setActiveButton(item.nama);
+                }}
+              >
+                {item.nama}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          container={undefined}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={() => {
+            setMobileOpen(false);
+            setActiveButton(null);
+          }}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+              background:
+                "linear-gradient(120deg,rgba(19, 30, 54, 255) 25%,rgba(67, 38, 100, 255) 100%)",
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
       </Box>
-    );
-  }
-}
+    </Box>
+  );
+};
 
 export default NavbarComponent;

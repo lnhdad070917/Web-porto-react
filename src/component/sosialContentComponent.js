@@ -4,11 +4,11 @@ import { Icon } from "@iconify/react";
 
 export default function SosialContent() {
   return (
-    <div>
+    <div className="flex justify-center pb-20">
       <div className="main">
         <div className="up">
           <button className="card1">
-            <Icon className="instagram" icon="line-md:instagram" width="30px" />
+            <Icon className="instagram" icon="line-md:instagram" width="30" />
           </button>
           <button className="card2">
             <Icon className="linkedin" icon="fa6-brands:linkedin" width="26" />
@@ -19,7 +19,7 @@ export default function SosialContent() {
             <Icon className="github" icon="octicon:mark-github-16" width="30" />
           </button>
           <button className="card4">
-            <h1>icon</h1>
+            <Icon className="facebook" icon="ps:facebook-alt" width="30" />
           </button>
         </div>
       </div>

@@ -1,17 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/index.css";
-import App from "./App";
 import NavbarComponent from "./page/template/navbar";
-import reportWebVitals from "./reportWebVitals";
 import Footer from "./page/template/Footer";
+import AboutMe from "./page/aboutMe";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+const Root = () => {
+  return (
+    <BrowserRouter>
+      <NavbarComponent />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/AboutMe" element={<AboutMe />} />
+        {/* Tambahkan rute lain untuk halaman lain di sini */}
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+};
+
+createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NavbarComponent />
-    <App />
-    <Footer />
+    <Root />
   </React.StrictMode>
 );
 

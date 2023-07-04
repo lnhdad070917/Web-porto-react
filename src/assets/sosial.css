@@ -78,9 +78,9 @@
   transition: 0.2s ease-in-out;
 }
 
-.discord {
+.facebook {
   margin-top: -0.9em;
-  margin-left: -1.2em;
+  margin-left: 1.2em;
   color: #8c9eff;
 }
 
@@ -120,6 +120,6 @@
   background-color: #8c9eff;
 }
 
-.card4:hover .discord {
+.card4:hover .facebook {
   color: white;
 }

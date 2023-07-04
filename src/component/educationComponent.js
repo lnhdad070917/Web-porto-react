@@ -3,6 +3,14 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
+import logoUMP from "../assets/img/Logo_UMP.png";
+import logoBangkit from "../assets/img/Logo_Bangkit.png";
+import logoCamp404 from "../assets/img/camp404.png";
+import logoCloud from "../assets/img/cloud.png";
+import logoDicoding from "../assets/img/dicoding.png";
+import logoProgrammerZamanNow from "../assets/img/programmerzamannow.png";
+import logoSantriKoding from "../assets/img/santrikoding.jpeg";
+import logoSkilvul from "../assets/img/skilvul.jpg";
 
 const HtmlTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -18,28 +26,28 @@ const HtmlTooltip = styled(({ className, ...props }) => (
 
 const technicalDevelopmentData = [
   {
-    logo: "logo 1",
-    nama: "Nama1",
+    logo: logoCamp404,
+    nama: "CAMP404",
   },
   {
-    logo: "logo 2",
-    nama: "Nama2",
+    logo: logoCloud,
+    nama: "Cloud Skill Boost",
   },
   {
-    logo: "logo 3",
-    nama: "Nama3",
+    logo: logoDicoding,
+    nama: "Dicoding",
   },
   {
-    logo: "logo 4",
-    nama: "Nama4",
+    logo: logoProgrammerZamanNow,
+    nama: "Programmer Zaman Now",
   },
   {
-    logo: "logo 5",
-    nama: "Nama5",
+    logo: logoSantriKoding,
+    nama: "Santri Coding",
   },
   {
-    logo: "logo 6",
-    nama: "Nama6",
+    logo: logoSkilvul,
+    nama: "Skilvul",
   },
 ];
 
@@ -52,24 +60,30 @@ export default function Education() {
           <HtmlTooltip
             title={
               <React.Fragment>
-                <Typography color="inherit">Tooltip UMP</Typography>
-                <em>{"And here's"}</em> <b>{"some"}</b>{" "}
-                <u>{"amazing content"}</u>. {"It's very engaging. Right?"}
+                <Typography className="text-center" color="inherit">
+                  Universitas Muhammadiyah Purwokerto
+                </Typography>
               </React.Fragment>
             }
           >
-            <Button>Logo UMP</Button>
+            <Button>
+              <img className="w-[80px]" src={logoUMP} alt="logoUMP" />
+            </Button>
           </HtmlTooltip>
           <HtmlTooltip
             title={
               <React.Fragment>
-                <Typography color="inherit">Tooltip Bangkit</Typography>
-                <em>{"And here's"}</em> <b>{"some"}</b>{" "}
-                <u>{"amazing content"}</u>. {"It's very engaging. Right?"}
+                <Typography color="inherit">Bangkit Academy 2023</Typography>
               </React.Fragment>
             }
           >
-            <Button>Logo Bangkit</Button>
+            <Button className="bg-gray-300">
+              <img
+                className="h-[55px] bg-white p-2"
+                src={logoBangkit}
+                alt="logoBangkit"
+              />
+            </Button>
           </HtmlTooltip>
           {/* saat hover menampilkan nama */}
         </div>
@@ -81,13 +95,19 @@ export default function Education() {
             key={index}
             title={
               <React.Fragment>
-                <Typography color="inherit">Tooltip {data.nama}</Typography>
-                <em>{"And here's"}</em> <b>{"some"}</b>{" "}
-                <u>{"amazing content"}</u>. {"It's very engaging. Right?"}
+                <Typography className="text-center" color="inherit">
+                  {data.nama}
+                </Typography>
               </React.Fragment>
             }
           >
-            <Button>{data.logo}</Button>
+            <Button>
+              <img
+                className="w-[40px] h-[40px] rounded-full "
+                src={data.logo}
+                alt="Logo"
+              />
+            </Button>
           </HtmlTooltip>
         ))}
         {/* saat hover menampilkan nama */}
