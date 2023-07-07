@@ -27,12 +27,12 @@ const navItems = [
     link: "/AboutMe",
   },
   {
-    nama: "Project",
-    link: "/MyProject",
-  },
-  {
     nama: "Skill",
     link: "/MySkill",
+  },
+  {
+    nama: "Project",
+    link: "/MyProject",
   },
   {
     nama: "Contact",

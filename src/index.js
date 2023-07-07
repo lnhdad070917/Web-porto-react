@@ -5,6 +5,7 @@ import "./assets/index.css";
 import NavbarComponent from "./page/template/navbar";
 import Footer from "./page/template/Footer";
 import AboutMe from "./page/aboutMe";
+import MySkill from "./page/mySkill";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -15,6 +16,7 @@ const Root = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/AboutMe" element={<AboutMe />} />
+        <Route path="/MySkill" element={<MySkill />} />
         {/* Tambahkan rute lain untuk halaman lain di sini */}
       </Routes>
       <Footer />
