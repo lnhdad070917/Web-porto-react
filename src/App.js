@@ -24,9 +24,10 @@ function App() {
         className="relative h-full pt-20 pb-11"
         style={{ background: "rgba(19, 30, 54, 255)" }}
       >
-        <div className="container mx-auto px-28 py-[5rem]">
-          <div className="flex justify-evenly items-center z-10">
-            <div className="relative w-2/3 pl-5">
+        <div className="container mx-auto md:px-28 py-[5rem]">
+          <div className="flex flex-col-reverse md:flex-row justify-evenly items-center z-10">
+            {/* Text Top */}
+            <div className="relative md:mt-0 mt-20 md:w-2/3 pl-5">
               <h1
                 data-aos="fade-down-right"
                 data-aos-duration="800"
@@ -78,17 +79,17 @@ function App() {
                 </span>
               </h1>
               <p
-                className="text-white w-[95%] pt-2 tracking-wider"
+                className="text-white md:pr-0 pr-5 md:w-[95%] pt-2 tracking-wider text-justify"
                 data-aos="slide-right"
                 data-aos-duration="800"
               >
-                7th-semester student, actively involved in various student
-                organizations and with a keen interest in programming. I am
-                proficient in PHP, JavaScript, VueJS, ReactJS, and MySQL, and
+                &emsp;&emsp;7th-semester student, actively involved in various
+                student organizations and with a keen interest in programming. I
+                am proficient in PHP, JavaScript, VueJS, ReactJS, and MySQL, and
                 have practical experience as a Fullstack Developer in the IT
                 industry.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 md:justify-start flex justify-center">
                 <button
                   className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-violet-950 py-2 px-4 mx-2 border border-purple-700 hover:border-transparent rounded inline-flex items-center"
                   data-aos="fade-up"
@@ -113,6 +114,7 @@ function App() {
                 </button>
               </div>
             </div>
+            {/* Image/Illustasi Top */}
             <div
               className="relative flex"
               data-aos="fade-left"
@@ -121,7 +123,7 @@ function App() {
               data-aos-duration="800"
             >
               <img
-                className="w-[12rem] lg:w-[48rem] animate-shake"
+                className="w-[20rem] lg:w-[48rem] animate-shake"
                 src={shape}
                 alt="Shape"
               />

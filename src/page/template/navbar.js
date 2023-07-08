@@ -68,7 +68,24 @@ const NavbarComponent = () => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.nama} disablePadding>
-            <ListItemButton sx={{ textAlign: "center", color: "white" }}>
+            <ListItemButton
+              sx={{
+                textAlign: "center",
+                color: "white",
+                ...(location.pathname === item.link && {
+                  // border: "3px solid purple",
+                  borderRadius: "25%",
+                  backgroundColor: "purple",
+                  color: "white",
+                  fontWeight: "bold",
+                }),
+              }}
+              component={Link}
+              to={item.link}
+              onClick={() => {
+                setActiveButton(item.nama);
+              }}
+            >
               <ListItemText primary={item.nama} />
             </ListItemButton>
           </ListItem>

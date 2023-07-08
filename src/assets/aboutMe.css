@@ -7,6 +7,13 @@
   justify-content: center;
 }
 
+@media (max-width: 762px) {
+  .loader {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .loader_cube {
   position: absolute;
   width: 100%;
@@ -73,23 +80,23 @@
 
 .instagram_about {
   color: #f56040;
-  border: 2px solid #f56040;
+  /* border: 2px solid #f56040; */
 }
 .linkedin_about {
   color: #0096d6;
-  border: 2px solid #0096d6;
+  /* border: 2px solid #0096d6; */
 }
 .facebook_about {
   color: #4267b2;
-  border: 2px solid #4267b2;
+  /* border: 2px solid #4267b2; */
 }
 .github_about {
   color: #000000;
-  border: 2px solid #000000;
+  /* border: 2px solid #000000; */
 }
 .whatsapp_about {
   color: #25d366;
-  border: 2px solid #25d366;
+  /* border: 2px solid #25d366; */
 }
 
 .instagram_about:hover::before {
