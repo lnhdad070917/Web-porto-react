@@ -8,18 +8,30 @@ export default function SosialContent() {
       <div className="main">
         <div className="up">
           <button className="card1">
-            <Icon className="instagram" icon="line-md:instagram" width="30" />
+            <Icon
+              className="instagram w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
+              icon="line-md:instagram"
+            />
           </button>
           <button className="card2">
-            <Icon className="linkedin" icon="fa6-brands:linkedin" width="26" />
+            <Icon
+              className="linkedin w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
+              icon="fa6-brands:linkedin"
+            />
           </button>
         </div>
         <div className="down">
           <button className="card3">
-            <Icon className="github" icon="octicon:mark-github-16" width="30" />
+            <Icon
+              className="github w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
+              icon="octicon:mark-github-16"
+            />
           </button>
           <button className="card4">
-            <Icon className="facebook" icon="ps:facebook-alt" width="30" />
+            <Icon
+              className="facebook w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
+              icon="ps:facebook-alt"
+            />
           </button>
         </div>
       </div>

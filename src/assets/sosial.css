@@ -78,6 +78,36 @@
   transition: 0.2s ease-in-out;
 }
 
+@media (min-width: 1024px) {
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    width: 140px;
+    height: 140px;
+  }
+  .card1 {
+    border-radius: 140px 5px 5px 5px;
+  }
+  .card2 {
+    border-radius: 5px 140px 5px 5px;
+  }
+  .card3 {
+    border-radius: 5px 5px 5px 140px;
+  }
+  .card4 {
+    border-radius: 5px 5px 140px 5px;
+  }
+  .github {
+    margin-top: -1em;
+    margin-left: 3em;
+  }
+  .instagram {
+    margin-top: 0.6em;
+    margin-left: 3.1em;
+  }
+}
+
 .facebook {
   margin-top: -0.9em;
   margin-left: 1.2em;

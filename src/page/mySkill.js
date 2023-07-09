@@ -11,7 +11,7 @@ export default function MySkill() {
           "linear-gradient(120deg,rgba(19, 30, 54, 255) 25%,rgba(67, 38, 100, 255) 100%)",
       }}
     >
-      <div className="lg:w-3/5 mt-20">
+      <div className="lg:w-3/5 mt-20 mb-20">
         <h2 className="text-center text-white text-4xl">
           <span style={{ color: "rgb(168 85 247)" }}>My</span> Skill
         </h2>
@@ -46,7 +46,9 @@ export default function MySkill() {
             <span>MySQL</span>
           </button>
         </div>
-        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5">Frameworks :</h2>
+        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5">
+          Frameworks/Library :
+        </h2>
         <div className="flex justify-center flex-wrap">
           <button className="button_custom mx-1 mb-3">
             <Icon className="svg" width={35} icon="logos:laravel" />
@@ -101,6 +103,14 @@ export default function MySkill() {
           <button className="button_custom mx-1 mb-3">
             <Icon className="svg" width={35} icon="mdi:api" />
             <span>Restful API</span>
+          </button>
+          <button className="button_custom mx-1 mb-3">
+            <Icon className="svg" width={35} icon="icon-park:github" />
+            <span>GitHub</span>
+          </button>
+          <button className="button_custom mx-1 mb-3">
+            <Icon className="svg" width={35} icon="logos:firebase" />
+            <span>Firebase</span>
           </button>
         </div>
       </div>

@@ -56,7 +56,7 @@ export default function Education() {
     <div>
       <div>
         <h1 className="text-2xl text-white pb-3">Primary Education</h1>
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly flex-wrap">
           <HtmlTooltip
             title={
               <React.Fragment>
@@ -88,8 +88,8 @@ export default function Education() {
           {/* saat hover menampilkan nama */}
         </div>
       </div>
-      <div>
-        <h1 className="text-2xl text-white py-3">Technical Development</h1>
+      <h1 className="text-2xl text-white py-3">Technical Development</h1>
+      <div className="flex justify-center flex-wrap">
         {technicalDevelopmentData.map((data, index) => (
           <HtmlTooltip
             key={index}
