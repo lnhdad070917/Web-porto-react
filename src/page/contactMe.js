@@ -86,7 +86,6 @@ export default function ContactMe() {
     }, 10000);
     // Menyegarkan form
     event.target.reset();
-    setSelectedValue("a");
     setEmail("");
     setError(false);
   };
@@ -436,7 +435,7 @@ export default function ContactMe() {
                       width={45}
                     />
                   </div>
-                  <h2 className="text-white text-3xl py-4">
+                  <h2 className="text-white sm:text-2xl py-4">
                     Didik Adi Darmawan
                   </h2>
                 </div>
@@ -448,7 +447,7 @@ export default function ContactMe() {
                       width={45}
                     />
                   </div>
-                  <h2 className="text-white text-3xl py-4">
+                  <h2 className="text-white sm:text-2xl py-4">
                     didikadidarmawan17@gmail.com
                   </h2>
                 </div>
@@ -460,7 +459,7 @@ export default function ContactMe() {
                       width={45}
                     />
                   </div>
-                  <h2 className="text-white text-3xl py-4">
+                  <h2 className="text-white sm:text-2xl py-4">
                     Dayeuhluhur, Cilacap, Jawa Tengah
                   </h2>
                 </div>
