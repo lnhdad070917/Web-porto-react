@@ -10,6 +10,8 @@ import SpinnLoader from "./component/spinnLoader";
 import CardComponent from "./component/cardComponent";
 import CardProject from "./component/cardProjectComponent";
 import MediaSosial from "./component/mediaSosialComponent";
+import PengunjungWeb from "./component/counterComponent";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -17,6 +19,10 @@ function App() {
       duration: 800, // Durasi animasi (dalam milidetik)
     });
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const navigate = useNavigate();
   return (
     <div>
       {/* TOP */}
@@ -27,6 +33,7 @@ function App() {
         <div className="container mx-auto md:px-28 py-[5rem]">
           <div className="flex flex-col-reverse md:flex-row justify-evenly items-center z-10">
             {/* Text Top */}
+            <PengunjungWeb />
             <div className="relative md:mt-0 mt-20 md:w-2/3 pl-5">
               <h1
                 data-aos="fade-down-right"
@@ -104,6 +111,7 @@ function App() {
                 <button
                   className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-violet-950 py-2 px-4 mx-2 border border-purple-700 hover:border-transparent rounded inline-flex items-center"
                   data-aos="fade-up"
+                  onClick={() => navigate("/AboutMe")}
                 >
                   <Icon
                     icon="mdi:about-circle-outline"
@@ -172,7 +180,7 @@ function App() {
               className="text-center text-slate-500 text-xl pb-2"
               data-aos="fade-up-right"
             >
-              Projects, University, and Company
+              Personal, University, and Company
             </p>
             <SpinnLoader />
           </div>
@@ -181,7 +189,10 @@ function App() {
           <div className="w-full lg:w-3/4 ">
             <CardProject />
             <div className="flex justify-center pt-5">
-              <button className="hover:bg-transparent bg-purple-500 hover:text-purple-700 font-semibold text-violet-950 py-2 px-4 mx-2 border hover:border-purple-700 border-transparent rounded inline-flex items-center">
+              <button
+                className="hover:bg-transparent bg-purple-500 hover:text-purple-700 font-semibold text-violet-950 py-2 px-4 mx-2 border hover:border-purple-700 border-transparent rounded inline-flex items-center"
+                onClick={() => navigate("/MyProject")}
+              >
                 <Icon
                   icon="fluent-mdl2:all-apps-mirrored"
                   width="30"

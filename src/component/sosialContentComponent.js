@@ -3,36 +3,70 @@ import "../assets/sosial.css";
 import { Icon } from "@iconify/react";
 
 export default function SosialContent() {
+  const media_sosial = [
+    {
+      class: "card1",
+      classIcon: "instagram",
+      icon: "line-md:instagram",
+      link: "https://instagram.com/didikad_17?igshid=MzRlODBiNWFlZA==",
+    },
+    {
+      class: "card2",
+      classIcon: "linkedin",
+      icon: "fa6-brands:linkedin",
+      link: "https://www.linkedin.com/in/didik-adi-darmawan-702653191/",
+    },
+  ];
+
+  const media_sosial_down = [
+    {
+      class: "card3",
+      classIcon: "github",
+      icon: "octicon:mark-github-16",
+      link: "https://github.com/lnhdad070917",
+    },
+    {
+      class: "card4",
+      classIcon: "facebook",
+      icon: "ps:facebook-alt",
+      link: "https://www.facebook.com/didik.a.darmawan.3/",
+    },
+  ];
+
+  const handleClick = (e, link) => {
+    e.preventDefault();
+    window.open(link, "_blank");
+  };
   return (
-    <div className="flex justify-center pb-20">
+    <div className="flex justify-center">
       <div className="main">
         <div className="up">
-          <button className="card1">
-            <Icon
-              className="instagram w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
-              icon="line-md:instagram"
-            />
-          </button>
-          <button className="card2">
-            <Icon
-              className="linkedin w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
-              icon="fa6-brands:linkedin"
-            />
-          </button>
+          {media_sosial.map((data, index) => (
+            <button
+              key={index}
+              className={data.class}
+              onClick={(e) => handleClick(e, data.link)}
+            >
+              <Icon
+                className={`${data.classIcon} w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]`}
+                icon={data.icon}
+              />
+            </button>
+          ))}
         </div>
         <div className="down">
-          <button className="card3">
-            <Icon
-              className="github w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
-              icon="octicon:mark-github-16"
-            />
-          </button>
-          <button className="card4">
-            <Icon
-              className="facebook w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]"
-              icon="ps:facebook-alt"
-            />
-          </button>
+          {media_sosial_down.map((data, index) => (
+            <button
+              key={index}
+              className={data.class}
+              onClick={(e) => handleClick(e, data.link)}
+            >
+              <Icon
+                className={`${data.classIcon} w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]`}
+                icon={data.icon}
+              />
+            </button>
+          ))}
         </div>
       </div>
     </div>

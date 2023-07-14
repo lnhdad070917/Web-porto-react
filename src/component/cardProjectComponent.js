@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./../assets/card.css";
-import image_project_1 from "../assets/img/test.png";
 import { Icon } from "@iconify/react";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
+import tenderplus from "../assets/img/tender.png";
+import cvmramanah from "../assets/img/mramanah.png";
+import travelista from "../assets/img/travelista.png";
+import dreamit from "../assets/img/dreamit.png";
 
 const cardData = [
   {
-    image: image_project_1,
+    image: tenderplus,
     title: "TenderPlus",
     description: "Internship Experience",
     backside_description:
@@ -16,7 +19,7 @@ const cardData = [
     position: "top-left",
   },
   {
-    image: image_project_1,
+    image: cvmramanah,
     title: "CV MRAmanah",
     description: "Freelance Exprerience",
     backside_description:
@@ -25,24 +28,29 @@ const cardData = [
     position: "top-right",
   },
   {
-    image: image_project_1,
+    image: travelista,
     title: "Travelista",
     description: "Student Project",
     backside_description:
       "project carried out to fulfill the final lecture assignment in a related subject.",
-    link: "https://mramanah.web.id/",
+    link: "https://travelista.dreamit.my.id/user/index2.php",
     position: "bottom-left",
   },
   {
-    image: image_project_1,
+    image: dreamit,
     title: "Dream IT",
     description: "Personal Project",
     backside_description:
       "personal projects to fill spare time, and to increase knowledge and gain experience.",
-    link: "https://mramanah.web.id/",
+    link: "https://dreamit.my.id/",
     position: "bottom-right",
   },
 ];
+
+const handleClick = (e, link) => {
+  e.preventDefault();
+  window.open(link, "_blank");
+};
 
 const CardProjec = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -68,7 +76,7 @@ const CardProjec = () => {
         >
           <div className="innerCard">
             <div className="frontSide">
-              <div className="card-image">
+              <div className="card-image pt-4">
                 <img src={card.image} alt="Card" />
               </div>
               <h2 className="title">{card.title}</h2>
@@ -79,7 +87,10 @@ const CardProjec = () => {
               <p className="lg:text-md text-sm font-light">
                 {card.backside_description}
               </p>
-              <button className="hover:bg-transparent bg-violet-900 hover:text-purple-700 font-semibold text-purple-500 py-2 px-4 mx-2 border hover:border-purple-900 border-transparent rounded inline-flex items-center lg:text-md text-xs font-light">
+              <button
+                className="hover:bg-transparent bg-violet-900 hover:text-purple-700 font-semibold text-purple-500 py-2 px-4 mx-2 border hover:border-purple-900 border-transparent rounded inline-flex items-center lg:text-md text-xs font-light"
+                onClick={(e) => handleClick(e, card.link)}
+              >
                 <Icon
                   icon="line-md:external-link"
                   width="30"

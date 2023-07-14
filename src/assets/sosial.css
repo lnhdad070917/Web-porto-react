@@ -46,7 +46,7 @@
 
 .linkedin {
   margin-top: 0.6em;
-  margin-left: 1.4em;
+  margin-left: 1em;
   color: #03a9f4;
 }
 
@@ -106,11 +106,21 @@
     margin-top: 0.6em;
     margin-left: 3.1em;
   }
+  .linkedin {
+    margin-top: 0.6em;
+    margin-left: 2em;
+    color: #03a9f4;
+  }
+  .facebook {
+    margin-top: -0.9em;
+    margin-left: 1.9em !important;
+    color: #8c9eff;
+  }
 }
 
 .facebook {
   margin-top: -0.9em;
-  margin-left: 1.2em;
+  margin-left: 0.9em;
   color: #8c9eff;
 }
 

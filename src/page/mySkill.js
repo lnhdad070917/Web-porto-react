@@ -1,8 +1,67 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./../assets/mySkill.css";
 import { Icon } from "@iconify/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function MySkill() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Durasi animasi (dalam milidetik)
+    });
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const programming = [
+    {
+      nama: "C++",
+      icon: "logos:c-plusplus",
+    },
+    {
+      nama: "PHP",
+      icon: "logos:php",
+    },
+    {
+      nama: "HTML",
+      icon: "skill-icons:html",
+    },
+    {
+      nama: "CSS",
+      icon: "skill-icons:css",
+    },
+    {
+      nama: "Javascript",
+      icon: "skill-icons:javascript",
+    },
+    {
+      nama: "MySQL",
+      icon: "logos:mysql",
+    },
+  ];
+
+  const Frameworks = [
+    { nama: "Laravel", icon: "logos:laravel" },
+    { nama: "Codeigniter3", icon: "logos:codeigniter-icon" },
+    { nama: "Express Js", icon: "skill-icons:expressjs-light" },
+    { nama: "React Js", icon: "devicon:react" },
+    { nama: "Flutter", icon: "logos:flutter" },
+  ];
+
+  const DesginUI = [
+    { nama: "Material UI", icon: "simple-icons:mui" },
+    { nama: "Tailwind", icon: "logos:bootstrap" },
+    { nama: "Bootstrap", icon: "logos:tailwindcss-icon" },
+  ];
+
+  const Other = [
+    { nama: "Node.js", icon: "logos:nodejs" },
+    { nama: "Google Cloud", icon: "logos:google-cloud" },
+    { nama: "Restful API", icon: "mdi:api" },
+    { nama: "GitHub", icon: "icon-park:github" },
+    { nama: "Firebase", icon: "logos:firebase" },
+  ];
+
   return (
     <div
       className="lg:mt-0 md:mt-16 flex items-center justify-center md:h-full lg:h-full"
@@ -12,106 +71,73 @@ export default function MySkill() {
       }}
     >
       <div className="lg:w-3/5 mt-20 mb-20">
-        <h2 className="text-center text-white text-4xl">
+        <h2 className="text-center text-white text-4xl" data-aos="fade-up">
           <span style={{ color: "rgb(168 85 247)" }}>My</span> Skill
         </h2>
         <hr
           className="w-[30%] bg-white"
           style={{ marginBottom: "10px", marginLeft: "35%", marginTop: "5px" }}
+          data-aos="fade-up"
         />
-        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5">Programming :</h2>
-        <div className="flex justify-center flex-wrap">
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:c-plusplus" />
-            <span>C++</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:php" />
-            <span>PHP</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="skill-icons:html" />
-            <span>HTML</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="skill-icons:css" />
-            <span>CSS</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="skill-icons:javascript" />
-            <span>JavaScript</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:mysql" />
-            <span>MySQL</span>
-          </button>
-        </div>
-        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5">
-          Frameworks/Library :
+        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
+          Programming :
         </h2>
         <div className="flex justify-center flex-wrap">
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:laravel" />
-            <span>Laravel</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:codeigniter-icon" />
-            <span>Codeigniter3</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon
-              className="svg"
-              width={35}
-              icon="skill-icons:expressjs-light"
-            />
-            <span>Express Js</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="devicon:react" />
-            <span>React Js</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:flutter" />
-            <span>Flutter</span>
-          </button>
+          {programming.map((data, i) => (
+            <button
+              className="button_custom mx-1 mb-3"
+              key={i}
+              data-aos="fade-up"
+            >
+              <Icon className="svg" width={35} icon={data.icon} />
+              <span>{data.nama}</span>
+            </button>
+          ))}
         </div>
-        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5">Design UI :</h2>
+        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
+          Framework :
+        </h2>
         <div className="flex justify-center flex-wrap">
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="simple-icons:mui" />
-            <span>Material-UI</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:bootstrap" />
-            <span>Bootstrap</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:tailwindcss-icon" />
-            <span>Tailwind</span>
-          </button>
+          {Frameworks.map((data, i) => (
+            <button
+              className="button_custom mx-1 mb-3"
+              key={i}
+              data-aos="fade-up"
+            >
+              <Icon className="svg" width={35} icon={data.icon} />
+              <span>{data.nama}</span>
+            </button>
+          ))}
         </div>
-        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5">Other :</h2>
+        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
+          Design UI :
+        </h2>
         <div className="flex justify-center flex-wrap">
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:nodejs" />
-            <span>Node.js</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:google-cloud" />
-            <span>Google Cloud</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="mdi:api" />
-            <span>Restful API</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="icon-park:github" />
-            <span>GitHub</span>
-          </button>
-          <button className="button_custom mx-1 mb-3">
-            <Icon className="svg" width={35} icon="logos:firebase" />
-            <span>Firebase</span>
-          </button>
+          {DesginUI.map((data, i) => (
+            <button
+              className="button_custom mx-1 mb-3"
+              key={i}
+              data-aos="fade-up"
+            >
+              <Icon className="svg" width={35} icon={data.icon} />
+              <span>{data.nama}</span>
+            </button>
+          ))}
+        </div>
+        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
+          Other :
+        </h2>
+        <div className="flex justify-center flex-wrap">
+          {Other.map((data, i) => (
+            <button
+              className="button_custom mx-1 mb-3"
+              key={i}
+              data-aos="fade-up"
+            >
+              <Icon className="svg" width={35} icon={data.icon} />
+              <span>{data.nama}</span>
+            </button>
+          ))}
         </div>
       </div>
     </div>
