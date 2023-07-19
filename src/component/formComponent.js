@@ -56,30 +56,8 @@ export default function FormComponent() {
         selectedValue === "b" ? event.target.elements.instagram.value : null,
       pesan: event.target.elements.pesan.value,
     };
-    // console.log("Data yang akan dikirim:", formDataObj);
-
-    // const formDataJson = JSON.stringify([formDataObj]);
-
-    // Mengirimkan data ke backend melalui permintaan HTTP (misalnya menggunakan fetch atau axios)
-    // Gantikan URL_BACKEND dengan URL yang sesuai dengan endpoint backend Anda
-    // fetch("http://127.0.0.1:8000/1", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: formDataJson,
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     // Proses tanggapan dari backend jika diperlukan
-    //     console.log(data);
-    //   })
-    //   .catch((error) => {
-    //     // Tangani kesalahan jika terjadi
-    //     console.error(error);
-    //   });
     try {
-      const response = await fetch("http://localhost:8000/1", {
+      const response = await fetch("https://api.dreamit.my.id/1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -103,10 +81,6 @@ export default function FormComponent() {
       setSuccessAlert(false);
       setErrorAlert(false);
     }, 4000);
-    // Menyegarkan form
-    // event.target.reset();
-    // setEmail("");
-    // setError(false);
   };
   return (
     <div>

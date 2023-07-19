@@ -49,7 +49,7 @@ export default function MyProject() {
       nama: "Dream IT",
       foto: dreamit,
       description:
-        "personal project, to develop skills and improve understanding with laravel + react.",
+        "personal project, with the aim of developing skills and increasing understanding in using React Js.",
       link: "https://dreamit.my.id/",
       posisi: "Posisi",
     },
