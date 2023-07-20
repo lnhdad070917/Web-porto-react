@@ -10,7 +10,7 @@ const PengunjungWeb = () => {
     const userId = Cookies.get("userId");
 
     if (!isLoading && !userId) {
-      fetch("https://api.dreamit.my.id/api/visit/update/1", { method: "GET" })
+      fetch("http://localhost:8000/api/visit/update/1", { method: "GET" })
         .then((response) => response.json())
         .then((data) => {
           setCounter(data.pengunjung);
@@ -20,7 +20,7 @@ const PengunjungWeb = () => {
           console.error("Failed to update visitor counter:", error);
         });
     } else {
-      fetch("https://api.dreamit.my.id/api/visit/view/1", {
+      fetch("http://localhost:8000/api/visit/view/1", {
         method: "GET",
       }).then((response) =>
         response.json().then((data) => {

@@ -57,7 +57,7 @@ export default function FormComponent() {
       pesan: event.target.elements.pesan.value,
     };
     try {
-      const response = await fetch("https://api.dreamit.my.id/1", {
+      const response = await fetch("http://localhost:8000/1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
