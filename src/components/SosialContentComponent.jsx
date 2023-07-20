@@ -8,13 +8,13 @@ export default function SosialContent() {
       class: "card1",
       classIcon: "instagram",
       icon: "line-md:instagram",
-      link: "https://instagram.com/didikad_17?igshid=MzRlODBiNWFlZA==",
+      link: "https://instagram.com/luthfiyyahnh_?igshid=ZDc4ODBmNjlmNQ==",
     },
     {
       class: "card2",
       classIcon: "linkedin",
       icon: "fa6-brands:linkedin",
-      link: "https://www.linkedin.com/in/didik-adi-darmawan-702653191/",
+      link: "https://www.linkedin.com/in/luthfiyyah-n-h",
     },
   ];
 
@@ -23,13 +23,13 @@ export default function SosialContent() {
       class: "card3",
       classIcon: "github",
       icon: "octicon:mark-github-16",
-      link: "https://github.com/lnhdad070917",
+      link: "https://github.com/luthfiyyahnh",
     },
     {
       class: "card4",
       classIcon: "facebook",
       icon: "ps:facebook-alt",
-      link: "https://www.facebook.com/didik.a.darmawan.3/",
+      link: "https://m.facebook.com/dhefhiyyach.dhefhiyyach.3/",
     },
   ];
 

@@ -6,11 +6,11 @@ import "typeface-lobster";
 import { Icon } from "@iconify/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SpinnLoader from "./component/spinnLoader";
-import CardComponent from "./component/cardComponent";
-import CardProject from "./component/cardProjectComponent";
-import MediaSosial from "./component/mediaSosialComponent";
-import PengunjungWeb from "./component/counterComponent";
+import SpinnLoader from "./components/SpinnLoaderComponent";
+import CardComponent from "./components/CardComponent";
+import CardProject from "./components/CardProjectComponent";
+import MediaSosial from "./components/MediaSosialComponent";
+import PengunjungWeb from "./components/CounterComponent";
 import { useNavigate } from "react-router-dom";
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
                 data-aos-duration="800"
                 style={{ fontFamily: "Lobster, cursive", color: "#0eeae2" }}
               >
-                Didik Adi Darmawan
+                Luthfiyyah Nurhasannah
               </h1>
               <h1
                 style={{
@@ -71,10 +71,10 @@ function App() {
                 <span style={{ color: "rgb(168 85 247)", fontWeight: "bold" }}>
                   <Typewriter
                     words={[
-                      "Web Developer",
-                      "Cloud Engineer",
-                      "Full-stack Developer",
-                      "Front-end Developer",
+                      "UI/UX Research & Design",
+                      "UX Researcher",
+                      "Web Designer",
+                      "Mobile App Designer",
                     ]}
                     loop={5}
                     cursor
@@ -90,11 +90,19 @@ function App() {
                 data-aos="slide-right"
                 data-aos-duration="800"
               >
-                &emsp;&emsp;7th-semester student, actively involved in various
-                student organizations and with a keen interest in programming. I
-                am proficient in PHP, JavaScript, VueJS, ReactJS, and MySQL, and
-                have practical experience as a Fullstack Developer in the IT
-                industry.
+                &emsp;&emsp;I am a dedicated 7th-semester student pursuing a
+                bachelor's degree at Universitas Pembangunan Nasional Yogyakarta
+                (UPNVYK). Apart from excelling in academics, I actively
+                participate in committee activities and serve as a laboratory
+                assistant in the Informatics Department. My proficiency in
+                fundamental programming skills algorithm, web, and mobile
+                programming complements my passion for UI/UX Research & Design.
+                I excel in research using design thinking methods and have
+                gained valuable experience during my 5-month internship in UI/UX
+                Research & Design with the Independent Campus Program, producing
+                notable works. With a strong team spirit and a readiness to
+                tackle new challenges, I am driven to create innovative
+                solutions in this field.
               </p>
               <div className="mt-10 md:justify-start flex justify-center">
                 <button

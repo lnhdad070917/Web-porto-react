@@ -2,12 +2,12 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/index.css";
-import NavbarComponent from "./page/template/navbar";
-import Footer from "./page/template/Footer";
-import AboutMe from "./page/aboutMe";
-import MySkill from "./page/mySkill";
-import MyProject from "./page/myProject";
-import ContactMe from "./page/contactMe";
+import NavbarComponent from "./pages/templates/Navbar";
+import Footer from "./pages/templates/Footer";
+import AboutMe from "./pages/AboutMe";
+import MySkill from "./pages/MySkill";
+import MyProject from "./pages/MyProject";
+import ContactMe from "./pages/MyContact";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -21,7 +21,6 @@ const Root = () => {
         <Route path="/MySkill" element={<MySkill />} />
         <Route path="/MyProject" element={<MyProject />} />
         <Route path="/ContactMe" element={<ContactMe />} />
-        {/* Tambahkan rute lain untuk halaman lain di sini */}
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -14,7 +14,7 @@ export default function Footer() {
           <span
             style={{ my: 2, fontFamily: "Lobster, cursive", color: "#0eeae2" }}
           >
-            Didik Adi Darmawan
+            Luthfiyyah Nurhasannah
           </span>
         </h2>
       </div>

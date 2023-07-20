@@ -5,7 +5,7 @@ import "./../assets/style.css";
 const SpinnLoader = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800, // Durasi animasi (dalam milidetik)
+      duration: 800,
     });
   }, []);
   return (

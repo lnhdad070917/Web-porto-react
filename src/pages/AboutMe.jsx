@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import fotoDidik from "../assets/img/didik.jpg";
+import fotoLuthfi from "../assets/img/luthfi.jpeg";
 import { Typewriter } from "react-simple-typewriter";
 import "../assets/aboutMe.css";
 import { Icon } from "@iconify/react";
@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 export default function AboutMe() {
   useEffect(() => {
     AOS.init({
-      duration: 800, // Durasi animasi (dalam milidetik)
+      duration: 800,
     });
   }, []);
   useEffect(() => {
@@ -18,27 +18,27 @@ export default function AboutMe() {
   const media_sosial = [
     {
       className: "instagram_about",
-      link: "https://instagram.com/didikad_17?igshid=MzRlODBiNWFlZA==",
+      link: "https://instagram.com/luthfiyyahnh_?igshid=ZDc4ODBmNjlmNQ==",
       icon: "line-md:instagram",
     },
     {
       className: "linkedin_about",
-      link: "https://www.linkedin.com/in/didik-adi-darmawan-702653191/",
+      link: "https://www.linkedin.com/in/luthfiyyah-n-h",
       icon: "fa6-brands:linkedin",
     },
     {
       className: "facebook_about",
-      link: "https://www.facebook.com/didik.a.darmawan.3/",
+      link: "https://m.facebook.com/dhefhiyyach.dhefhiyyach.3/",
       icon: "ps:facebook-alt",
     },
     {
       className: "github_about",
-      link: "https://github.com/lnhdad070917",
+      link: "https://github.com/luthfiyyahnh",
       icon: "octicon:mark-github-16",
     },
     {
       className: "whatsapp_about",
-      link: "https://wa.me/6283162334073",
+      link: "https://wa.me/6285848265261",
       icon: "simple-icons:whatsapp",
     },
   ];
@@ -67,9 +67,9 @@ export default function AboutMe() {
           </div>
         </div>
         <img
-          src={fotoDidik}
+          src={fotoLuthfi}
           className="w-[150px] md:w-[250px] rounded-full z-10 absolute"
-          alt="fotoDidik"
+          alt="fotoLuthfi"
         />
         <div className="mt-[400px] md:mt-[530px] z-10 flex justify-center flex-wrap">
           {media_sosial.map((data, index) => (
@@ -94,17 +94,17 @@ export default function AboutMe() {
           <hr className="w-[30%] bg-white" />
         </h2>
         <p className="text-white text-2xl md:text-4xl pb-1">
-          I'm Didik Adi Darmawan
+          I'm Luthfiyyah Nurhasannah
         </p>
         <p className="text-white text-md md:text-xl pb-3">
           As a{" "}
           <span style={{ color: "rgb(168 85 247)", fontWeight: "bold" }}>
             <Typewriter
               words={[
-                "Web Developer",
-                "Cloud Engineer",
-                "Full-stack Developer",
-                "Front-end Developer",
+                "UI/UX Research & Design",
+                "UX Researcher",
+                "Web Designer",
+                "Mobile App Designer",
               ]}
               loop={5}
               cursor
@@ -116,13 +116,18 @@ export default function AboutMe() {
           </span>
         </p>
         <p className="text-white text-sm md:text-md pb-20 md:pr-10 md:p-0 text-justify">
-          &emsp;&emsp;I have an interest in programming and enjoy contributing
-          to the development of technology applications and solutions. I am
-          proficient in PHP, JavaScript, CSS, VueJS, ReactJS, Express.js,
-          Node.js, and MySQL, and have gained practical experience as a
-          Fullstack Developer in the IT industry. Additionally, I've studied PHP
-          frameworks like Codeigniter and Laravel. I am passionate in a teamwork
-          environment and always up for new challenges.
+          &emsp;&emsp;I am a dedicated 7th-semester student pursuing a
+          bachelor's degree at Universitas Pembangunan Nasional Yogyakarta
+          (UPNVYK). Apart from excelling in academics, I actively participate in
+          committee activities and serve as a laboratory assistant in the
+          Informatics Department. My proficiency in fundamental programming
+          skills algorithm, web, and mobile programming complements my passion
+          for UI/UX Research & Design. I excel in research using design thinking
+          methods and have gained valuable experience during my 5-month
+          internship in UI/UX Research & Design with the Independent Campus
+          Program, producing notable works. With a strong team spirit and a
+          readiness to tackle new challenges, I am driven to create innovative
+          solutions in this field.
         </p>
       </div>
     </div>

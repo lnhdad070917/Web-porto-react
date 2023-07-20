@@ -1,48 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./../assets/card.css";
 import { Icon } from "@iconify/react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-import tenderplus from "../assets/img/tender.png";
-import cvmramanah from "../assets/img/mramanah.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import gopic from "../assets/img/Gopic.png";
+import maxim from "../assets/img/Redesign_Maxim.png";
+import eduspace from "../assets/img/EduSpace.png";
 import travelista from "../assets/img/travelista.png";
-import dreamit from "../assets/img/dreamit.png";
 
 const cardData = [
   {
-    image: tenderplus,
-    title: "TenderPlus",
-    description: "Internship Experience",
-    backside_description:
-      "internship experience at Beecons for 5 months as a Full-Stack Developer, building a tenderplus platform.",
-    link: "https://tenderplus.id",
+    image: gopic,
+    title: "Gopic",
+    description: "Studi Independent Experience",
+    link: "#",
     position: "top-left",
   },
   {
-    image: cvmramanah,
-    title: "CV MRAmanah",
-    description: "Freelance Exprerience",
-    backside_description:
-      "freelance experience at CV Malik Rizki Amanah as a Web Developer, building the main web or selling books.",
-    link: "https://mramanah.web.id/",
+    image: maxim,
+    title: "Redesign Maxim",
+    description: "Studi Independent Experience",
+    link: "#",
     position: "top-right",
   },
   {
     image: travelista,
     title: "Travelista",
     description: "Student Project",
-    backside_description:
-      "project carried out to fulfill the final lecture assignment in a related subject.",
     link: "https://travelista.dreamit.my.id/user/index2.php",
     position: "bottom-left",
   },
   {
-    image: dreamit,
-    title: "Dream IT",
-    description: "Personal Project",
-    backside_description:
-      "personal projects to fill spare time, and to increase knowledge and gain experience.",
-    link: "https://dreamit.my.id/",
+    image: eduspace,
+    title: "Eduspace",
+    description: "Studi Independent Experience",
+    link: "#",
     position: "bottom-right",
   },
 ];
@@ -52,12 +44,18 @@ const handleClick = (e, link) => {
   window.open(link, "_blank");
 };
 
-const CardProjec = () => {
+const CardProject = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleCardHover = (index) => {
     setHoveredCard(index);
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
 
   const handleCardLeave = () => {
     setHoveredCard(null);
@@ -84,9 +82,6 @@ const CardProjec = () => {
             </div>
             <div className="backSide p-7">
               <p className="lg:text-3xl text-md">{card.title}</p>
-              <p className="lg:text-md text-sm font-light">
-                {card.backside_description}
-              </p>
               <button
                 className="hover:bg-transparent bg-violet-900 hover:text-purple-700 font-semibold text-purple-500 py-2 px-4 mx-2 border hover:border-purple-900 border-transparent rounded inline-flex items-center lg:text-md text-xs font-light"
                 onClick={(e) => handleClick(e, card.link)}
@@ -106,4 +101,4 @@ const CardProjec = () => {
   );
 };
 
-export default CardProjec;
+export default CardProject;

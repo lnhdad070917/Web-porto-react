@@ -10,17 +10,25 @@ const PengunjungWeb = () => {
     const userId = Cookies.get("userId");
 
     if (!isLoading && !userId) {
+<<<<<<< Updated upstream:src/component/counterComponent.js
       fetch("https://api.dreamit.my.id/api/visit/update/1", { method: "GET" })
+=======
+      fetch("https://api.dreamit.my.id/api/visit/update/2", { method: "GET" })
+>>>>>>> Stashed changes:src/components/CounterComponent.jsx
         .then((response) => response.json())
         .then((data) => {
           setCounter(data.pengunjung);
-          Cookies.set("userId", "1", { expires: 1 }); // Cookie berlaku selama 1 hari
+          Cookies.set("userId", "1", { expires: 1 });
         })
         .catch((error) => {
           console.error("Failed to update visitor counter:", error);
         });
     } else {
+<<<<<<< Updated upstream:src/component/counterComponent.js
       fetch("https://api.dreamit.my.id/api/visit/view/1", {
+=======
+      fetch("https://api.dreamit.my.id/api/visit/view/2", {
+>>>>>>> Stashed changes:src/components/CounterComponent.jsx
         method: "GET",
       }).then((response) =>
         response.json().then((data) => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import "./../assets/contactMe.css";
-import FormComponent from "../component/formComponent";
+import FormComponent from "../components/FormComponent";
 
 export default function ContactMe() {
   useEffect(() => {
@@ -11,19 +11,19 @@ export default function ContactMe() {
   const media_sosial = [
     {
       icon: "fa-brands:instagram-square",
-      link: "https://instagram.com/didikad_17?igshid=MzRlODBiNWFlZA==",
+      link: "https://instagram.com/luthfiyyahnh_?igshid=ZDc4ODBmNjlmNQ==",
     },
     {
       icon: "bi:linkedin",
-      link: "https://www.linkedin.com/in/didik-adi-darmawan-702653191/",
+      link: "https://www.linkedin.com/in/luthfiyyah-n-h",
     },
     {
       icon: "fa:github-square",
-      link: "https://github.com/lnhdad070917",
+      link: "https://github.com/luthfiyyahnh",
     },
     {
       icon: "brandico:facebook-rect",
-      link: "https://www.facebook.com/didik.a.darmawan.3/",
+      link: "https://m.facebook.com/dhefhiyyach.dhefhiyyach.3/",
     },
   ];
   const handleClick = (e, link) => {
@@ -51,7 +51,7 @@ export default function ContactMe() {
                     />
                   </div>
                   <h2 className="text-white sm:text-2xl py-4">
-                    Didik Adi Darmawan
+                    Luthfiyyah Nurhasannah
                   </h2>
                 </div>
                 <div className="flex gap-2">
@@ -63,7 +63,7 @@ export default function ContactMe() {
                     />
                   </div>
                   <h2 className="text-white sm:text-2xl py-4">
-                    didikadidarmawan17@gmail.com
+                    luthfiyyahnurhasanah070917@gmail.com
                   </h2>
                 </div>
                 <div className="flex gap-2">

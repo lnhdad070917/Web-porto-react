@@ -1,70 +1,59 @@
 import React, { useEffect } from "react";
 import "./../assets/mySkill.css";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function MySkill() {
   useEffect(() => {
     AOS.init({
-      duration: 800, // Durasi animasi (dalam milidetik)
+      duration: 800,
     });
   }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const programming = [
+  const HardSkill = [
     {
-      nama: "C++",
-      icon: "logos:c-plusplus",
+      nama: "Design Thinking",
     },
     {
-      nama: "PHP",
-      icon: "logos:php",
+      nama: "Research",
     },
     {
-      nama: "HTML",
-      icon: "skill-icons:html",
+      nama: "Information Achitecture",
     },
     {
-      nama: "CSS",
-      icon: "skill-icons:css",
+      nama: "Interaction Design",
     },
     {
-      nama: "Javascript",
-      icon: "skill-icons:javascript",
-    },
-    {
-      nama: "MySQL",
-      icon: "logos:mysql",
+      nama: "Usability Testing",
     },
   ];
 
-  const Frameworks = [
-    { nama: "Laravel", icon: "logos:laravel" },
-    { nama: "Codeigniter3", icon: "logos:codeigniter-icon" },
-    { nama: "Express Js", icon: "skill-icons:expressjs-light" },
-    { nama: "React Js", icon: "devicon:react" },
-    { nama: "Flutter", icon: "logos:flutter" },
-  ];
-
-  const DesginUI = [
-    { nama: "Material UI", icon: "simple-icons:mui" },
-    { nama: "Tailwind", icon: "logos:bootstrap" },
-    { nama: "Bootstrap", icon: "logos:tailwindcss-icon" },
+  const SoftSkill = [
+    { nama: "Communication Skill", icon: "logos:laravel" },
+    { nama: "Teamwork", icon: "logos:codeigniter-icon" },
+    { nama: "Problem Sovling", icon: "skill-icons:expressjs-light" },
+    { nama: "Critical Thinking", icon: "devicon:react" },
+    { nama: "Leadership", icon: "logos:flutter" },
+    { nama: "Time Management", icon: "logos:flutter" },
+    { nama: "Decision Making", icon: "logos:flutter" },
   ];
 
   const Other = [
-    { nama: "Node.js", icon: "logos:nodejs" },
-    { nama: "Google Cloud", icon: "logos:google-cloud" },
-    { nama: "Restful API", icon: "mdi:api" },
+    { nama: "Figma", icon: "logos:nodejs" },
+    { nama: "Canva", icon: "logos:nodejs" },
+    { nama: "Maze", icon: "logos:nodejs" },
+    { nama: "Photoshop", icon: "logos:nodejs" },
+    { nama: "Microsoft Office", icon: "logos:nodejs" },
+    { nama: "Discord", icon: "logos:nodejs" },
     { nama: "GitHub", icon: "icon-park:github" },
-    { nama: "Firebase", icon: "logos:firebase" },
   ];
 
   return (
     <div
-      className="lg:mt-0 md:mt-16 flex items-center justify-center md:h-full lg:h-full"
+      className="lg:mt-0 md:mt-16 flex items-center justify-center md:h-full lg:h-screen"
       style={{
         background:
           "linear-gradient(120deg,rgba(19, 30, 54, 255) 25%,rgba(67, 38, 100, 255) 100%)",
@@ -80,46 +69,31 @@ export default function MySkill() {
           data-aos="fade-up"
         />
         <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
-          Programming :
+          Hard Skill :
         </h2>
         <div className="flex justify-center flex-wrap">
-          {programming.map((data, i) => (
+          {HardSkill.map((data, i) => (
             <button
               className="button_custom mx-1 mb-3"
               key={i}
               data-aos="fade-up"
             >
-              <Icon className="svg" width={35} icon={data.icon} />
+              {/* <Icon className="svg" width={35} icon={data.icon} /> */}
               <span>{data.nama}</span>
             </button>
           ))}
         </div>
         <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
-          Framework :
+          Soft Skill :
         </h2>
         <div className="flex justify-center flex-wrap">
-          {Frameworks.map((data, i) => (
+          {SoftSkill.map((data, i) => (
             <button
               className="button_custom mx-1 mb-3"
               key={i}
               data-aos="fade-up"
             >
-              <Icon className="svg" width={35} icon={data.icon} />
-              <span>{data.nama}</span>
-            </button>
-          ))}
-        </div>
-        <h2 className="pb-5 text-white text-xl lg:pl-0 pl-5" data-aos="fade-up">
-          Design UI :
-        </h2>
-        <div className="flex justify-center flex-wrap">
-          {DesginUI.map((data, i) => (
-            <button
-              className="button_custom mx-1 mb-3"
-              key={i}
-              data-aos="fade-up"
-            >
-              <Icon className="svg" width={35} icon={data.icon} />
+              {/* <Icon className="svg" width={35} icon={data.icon} /> */}
               <span>{data.nama}</span>
             </button>
           ))}
@@ -134,7 +108,7 @@ export default function MySkill() {
               key={i}
               data-aos="fade-up"
             >
-              <Icon className="svg" width={35} icon={data.icon} />
+              {/* <Icon className="svg" width={35} icon={data.icon} /> */}
               <span>{data.nama}</span>
             </button>
           ))}

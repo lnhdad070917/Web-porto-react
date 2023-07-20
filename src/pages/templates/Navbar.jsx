@@ -62,7 +62,7 @@ const NavbarComponent = () => {
         variant="h6"
         sx={{ my: 2, fontFamily: "Lobster, cursive", color: "#0eeae2" }}
       >
-        Didik Adi Darmawan
+        Luthfiyyah Nurhasannah
       </Typography>
       <Divider />
       <List>
@@ -123,7 +123,7 @@ const NavbarComponent = () => {
               color: "#0eeae2",
             }}
           >
-            Didik Adi Darmawan
+            Luthfiyyah Nurhasannah
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

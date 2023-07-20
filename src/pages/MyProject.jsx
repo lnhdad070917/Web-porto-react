@@ -5,16 +5,17 @@ import "aos/dist/aos.css";
 import mramanah from "./../assets/img/mramanah.png";
 import tenderplus from "./../assets/img/tender.png";
 import travelista from "./../assets/img/travelista.png";
-import admin from "./../assets/img/admin.png";
-import awanstore from "./../assets/img/awanstore.png";
 import dreamit from "./../assets/img/dreamit.png";
 import incraft from "./../assets/img/incraft.png";
+import gopic from "../assets/img/Gopic.png";
+import maxim from "../assets/img/Redesign_Maxim.png";
+import eduspace from "../assets/img/EduSpace.png";
 import { Icon } from "@iconify/react";
 
 export default function MyProject() {
   useEffect(() => {
     AOS.init({
-      duration: 800, // Durasi animasi (dalam milidetik)
+      duration: 800,
     });
   }, []);
   useEffect(() => {
@@ -22,59 +23,39 @@ export default function MyProject() {
   }, []);
   const Projects = [
     {
-      nama: "TenderPlus",
-      foto: tenderplus,
-      description:
-        "internship as a full stack developer, and building the TenderPlus website (MSIB 3)",
-      link: "https://tenderplus.id/",
-      posisi: "Posisi",
-    },
-    {
-      nama: "In-Craft (Cloud)",
-      foto: incraft,
-      description:
-        "project of the Capstone group, on the implementation of Bangit 2023 as a cloud computing cohort (MSIB 4)",
+      nama: "Gopic",
+      foto: gopic,
       link: "#",
       posisi: "Posisi",
     },
     {
-      nama: "Malik Rizki Amanah",
-      foto: mramanah,
-      description:
-        "freelance worker at CV MR Amanah as a Full Stack Developer building main website selling books and journals.",
-      link: "https://mramanah.web.id/",
+      nama: "Redesign Maxim",
+      foto: maxim,
+      link: "#",
+      posisi: "Posisi",
+    },
+    {
+      nama: "Eduspace",
+      foto: eduspace,
+      link: "#",
       posisi: "Posisi",
     },
     {
       nama: "Dream IT",
       foto: dreamit,
-      description:
-        "personal project, with the aim of developing skills and increasing understanding in using React Js.",
       link: "https://dreamit.my.id/",
       posisi: "Posisi",
     },
     {
       nama: "Travelista",
       foto: travelista,
-      description:
-        "personal project, to increase understanding of CRUD in simple web creation.",
       link: "https://travelista.dreamit.my.id/user/index2.php",
       posisi: "Posisi",
     },
     {
-      nama: "Admin Web",
-      foto: admin,
-      description:
-        "personal project, to increase understanding of CRUD in simple web creation.",
-      link: "https://admin.dreamit.my.id/",
-      posisi: "Posisi",
-    },
-    {
-      nama: "store Web",
-      foto: awanstore,
-      description:
-        "final project, to fulfill course assignments in semester 4. and improve understanding of learning.",
-      link: "https://store.dreamit.my.id/dashboard.php",
+      nama: "MR Amanah",
+      foto: mramanah,
+      link: "https://mramanah.web.id/",
       posisi: "Posisi",
     },
   ];
@@ -93,13 +74,13 @@ export default function MyProject() {
       <div className="pt-32"></div>
       <div className="mb-10">
         <h2
-          className="text-center text-white text-3xl loader_title"
+          className="text-center text-white text-[60px] loader_title"
           data-aos="fade-up"
         >
           My &nbsp;
-          <div className="pt-5">
-            <span className="text-4xl">Project</span>
-            <span className="text-4xl">Project</span>
+          <div className="pt-7">
+            <span className="text-[60px]">Project</span>
+            <span className="text-[60px]">Project</span>
           </div>
         </h2>
       </div>
@@ -108,7 +89,7 @@ export default function MyProject() {
           <div className="card_custom_project" key={i} data-aos="fade-up">
             <div className="content">
               <img src={data.foto} alt="foto_project" />
-              <p className="text-3xl">{data.nama}</p>
+              <p className="text-2xl">{data.nama}</p>
               <p className="para">{data.description}</p>
               <button
                 className="btn flex items-center"

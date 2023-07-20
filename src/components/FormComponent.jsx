@@ -56,8 +56,13 @@ export default function FormComponent() {
         selectedValue === "b" ? event.target.elements.instagram.value : null,
       pesan: event.target.elements.pesan.value,
     };
+
     try {
+<<<<<<< Updated upstream:src/component/formComponent.js
       const response = await fetch("https://api.dreamit.my.id/1", {
+=======
+      const response = await fetch("https://api.dreamit.my.id/2", {
+>>>>>>> Stashed changes:src/components/FormComponent.jsx
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +91,7 @@ export default function FormComponent() {
     <div>
       <Box
         component="form"
-        onSubmit={handleSubmit} // Menambahkan penanganan submit form
+        onSubmit={handleSubmit}
         sx={{
           "& .MuiTextField-root": { margin: "10px", width: "100%" },
         }}
@@ -384,7 +389,6 @@ export default function FormComponent() {
                   setOpen(false);
                 }}
               >
-                {/* <CloseIcon fontSize="inherit" /> */}
                 <Icon
                   icon="line-md:close-small"
                   width={25}
@@ -417,7 +421,6 @@ export default function FormComponent() {
                   setOpen(false);
                 }}
               >
-                {/* <CloseIcon fontSize="inherit" /> */}
                 <Icon
                   icon="line-md:close-small"
                   width={25}
